@@ -3,7 +3,7 @@
   "repo": "ianstormtaylor/loading",
   "license": "MIT",
   "version": "0.0.1",
-  "description": "Easily toggle a loading class on your elements.",
+  "description": "Easily toggle a loading class on an element.",
   "keywords": ["loading", "class", "element"],
   "dependencies": {
     "component/classes": "*"
