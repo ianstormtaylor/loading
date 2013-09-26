@@ -22,7 +22,7 @@ Model.get(1, function (err, model) {
 
 ## API
 
-### loading(el, delay)
+### loading(el, [delay])
   
   Add a `'loading'` class to an `element` after an optional `delay`, and return a function that will remove it. `delay` defaults to `200` milliseconds.
 
