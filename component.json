@@ -2,8 +2,8 @@
   "name": "loading",
   "repo": "ianstormtaylor/loading",
   "license": "MIT",
-  "version": "0.0.1",
-  "description": "Easily toggle a loading class on an element.",
+  "version": "0.1.0",
+  "description": "A simple way to toggle loading state.",
   "keywords": ["loading", "class", "element"],
   "dependencies": {
     "component/classes": "*"

@@ -1,16 +1,40 @@
+
 describe('loading', function () {
+
   var assert = require('assert')
     , loading = require('loading');
 
-  it('should add a loading class', function () {
-    loading(document.body);
-    assert('loading' === document.body.className);
+  beforeEach(function () {
+    this.el = document.createElement('div');
   });
 
-  it('should return a function that removes the loading class', function () {
-    var loaded = loading(document.body);
-    assert('function' === typeof loaded);
-    loaded();
-    assert('' === document.body.className);
+  it('should add a \'loading\' class after a delay', function (done) {
+    var el = this.el;
+    loading(el);
+    setTimeout(function () {
+      assert('loading' == el.className);
+      done();
+    }, 200);
   });
+
+  it('should accept a custom delay', function (done) {
+    var el = this.el;
+    loading(el, 1);
+    setTimeout(function () {
+      assert('loading' == el.className);
+      done();
+    }, 1);
+  });
+
+  it('should return a function to remove the class', function (done) {
+    var el = this.el;
+    var loaded = loading(el, 0);
+    setTimeout(function () {
+      assert('loading' == el.className);
+      loaded();
+      assert('' === el.className);
+      done();
+    }, 0);
+  });
+
 });
